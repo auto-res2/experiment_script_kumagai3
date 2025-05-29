@@ -24,5 +24,8 @@
     "experimental_setup": "The framework was evaluated on continuous control tasks including navigation (MAZE), robot arm manipulation (FETCH PICK), dexterous manipulation (HAND ROTATE), and locomotion (CHEETAH, WALKER, ANTREACH). The performance was compared against Behavioral Cloning (BC), Implicit BC (IBC), and Diffusion Policy, using success rate and return as metrics. Generalization was tested by injecting noise into initial states and goal locations.",
     "limitations": "The framework is designed to learn from expert trajectories without environment interactions and cannot directly learn from agent trajectories. The method inherits biases from the expert demonstrators.",
     "future_research_directions": "Future research could extend the method to incorporate agent data, potentially allowing for improvement when interacting with environments is possible. Addressing biases inherited from expert demonstrators is another area for future work."
-  }
+  },
+  "add_queries": [
+    "vision"
+  ]
 }
