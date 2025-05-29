@@ -1,0 +1,10 @@
+device: cuda
+experiment:
+  batch_size: 4
+  diffusion_weight: 0.1
+  embed_dim: 64
+  learning_rate: 1e-4
+  num_actions: 3
+  num_epochs: 3
+  token_size: 16
+status_enum: stopped
