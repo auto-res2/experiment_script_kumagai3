@@ -27,5 +27,41 @@
   },
   "add_queries": [
     "vision"
+  ],
+  "generated_queries": [
+    "diffusion model",
+    "visual diffusion",
+    "diffusion cloning",
+    "imitation learning",
+    "diffusion dynamics"
+  ],
+  "add_github_urls": [
+    "https://github.com/whlzy/FiT"
+  ],
+  "add_method_texts": [
+    {
+      "arxiv_id": "2402.12376v4",
+      "arxiv_url": "http://arxiv.org/abs/2402.12376v4",
+      "title": "FiT: Flexible Vision Transformer for Diffusion Model",
+      "authors": [
+        "Zeyu Lu",
+        "Zidong Wang",
+        "Di Huang",
+        "Chengyue Wu",
+        "Xihui Liu",
+        "Wanli Ouyang",
+        "Lei Bai"
+      ],
+      "published_date": "2024-02-19T18:59:07Z",
+      "journal": "",
+      "doi": "",
+      "summary": "Nature is infinitely resolution-free. In the context of this reality,\nexisting diffusion models, such as Diffusion Transformers, often face\nchallenges when processing image resolutions outside of their trained domain.\nTo overcome this limitation, we present the Flexible Vision Transformer (FiT),\na transformer architecture specifically designed for generating images with\nunrestricted resolutions and aspect ratios. Unlike traditional methods that\nperceive images as static-resolution grids, FiT conceptualizes images as\nsequences of dynamically-sized tokens. This perspective enables a flexible\ntraining strategy that effortlessly adapts to diverse aspect ratios during both\ntraining and inference phases, thus promoting resolution generalization and\neliminating biases induced by image cropping. Enhanced by a meticulously\nadjusted network structure and the integration of training-free extrapolation\ntechniques, FiT exhibits remarkable flexibility in resolution extrapolation\ngeneration. Comprehensive experiments demonstrate the exceptional performance\nof FiT across a broad range of resolutions, showcasing its effectiveness both\nwithin and beyond its training resolution distribution. Repository available at\nhttps://github.com/whlzy/FiT.",
+      "github_url": "https://github.com/whlzy/FiT",
+      "main_contributions": "The paper introduces Flexible Vision Transformer (FiT), a novel transformer architecture for diffusion models, enabling image generation at arbitrary resolutions and aspect ratios. Key contributions include a flexible training pipeline eliminating cropping, a dynamic token length modeling architecture, and a training-free resolution extrapolation method, achieving state-of-the-art performance across various resolutions.",
+      "methodology": "FiT models images as sequences of dynamically-sized tokens, using a flexible training pipeline that maintains aspect ratios and resizes images to fit a maximum token limit. The architecture incorporates 2D Rotary Positional Embedding (RoPE), Swish-Gated Linear Unit (SwiGLU), and Masked Multi-Head Self-Attention (MHSA). Training-free extrapolation techniques like VisionNTK and VisionYaRN are adapted for resolution generalization.",
+      "experimental_setup": "The model was trained on the ImageNet dataset with a maximum token length of 256. Performance was evaluated using Fre'chet Inception Distance (FID), sFID, Inception Score (IS), Precision, and Recall. Experiments were conducted on in-distribution (256x256, 160x320, 128x384) and out-of-distribution (320x320, 224x448, 160x480) resolutions, comparing FiT against state-of-the-art CNN and transformer-based generative models.",
+      "limitations": "The FiT-XL/2 model was trained for a limited number of steps (1.8M), resulting in slightly inferior performance compared to DiT-XL/2 at the training resolution (256x256). The generative capabilities of FiT-XL/2 were not fully explored with higher resolution training. Furthermore, the research primarily focused on training-free resolution extrapolation techniques, without exploring methods requiring additional training.",
+      "future_research_directions": "Future research directions include exploring the generative capabilities of FiT with higher resolution training, investigating resolution extrapolation methods that require additional training, and further studies on generating images with arbitrary resolutions and aspect ratios, enabled by the flexibility of FiT."
+    }
   ]
 }
